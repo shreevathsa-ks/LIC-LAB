@@ -5,7 +5,9 @@ A Common Source (CS) amplifier is a basic MOSFET amplifier configuration widely 
 
 The voltage gain of a CS amplifier mainly depends on the transconductance of the MOSFET and the drain resistance. Its frequency response consists of three regions: low frequency, mid-band, and high frequency. In the mid-band region, the gain remains approximately constant. At low frequencies, coupling and bypass capacitors reduce the gain, while at high frequencies, internal capacitances of the MOSFET cause the gain to fall. The bandwidth is defined by the lower and upper cutoff frequencies where the gain drops by 3 dB from its mid-band value.
 
-(picture of a cs amplifier and graph of 180 phase shift,and frequency responce(if possible all in one))
+![Image description](https://github.com/shreevathsa-ks/LIC-LAB/blob/f22aee5d2c26676b9d77b64c7c70115edf73e43f/LIC-EXP-1/Screenshot%202026-02-25%20222759.png)
+![Image description](https://github.com/shreevathsa-ks/LIC-LAB/blob/f22aee5d2c26676b9d77b64c7c70115edf73e43f/LIC-EXP-1/Screenshot%202026-02-25%20223105.png)
+![Image description](https://github.com/shreevathsa-ks/LIC-LAB/blob/f22aee5d2c26676b9d77b64c7c70115edf73e43f/LIC-EXP-1/Screenshot%202026-02-25%20223513.png)
 
 # EXPERIMENT-1:
 ## AIM
@@ -111,7 +113,7 @@ W ≈ 6.7 × 10<sup>-6</sup> m
 
 W ≈ 6.755 µm  
 --
-(pcture of ckt)  
+![Image description](https://github.com/shreevathsa-ks/LIC-LAB/blob/f22aee5d2c26676b9d77b64c7c70115edf73e43f/LIC-EXP-1/Screenshot%202026-02-25%20220154.png)
 
 But if we verify the same circuit with the same parameters, the I<sub>D</sub> value and the V<sub>GS</sub> 
 value will not match the ones that we got from theoretical analysis.
@@ -120,7 +122,7 @@ We got W as 9.087µm
 
 --
 
-(picture of ckt with o/p) 
+![Image description](https://github.com/shreevathsa-ks/LIC-LAB/blob/f22aee5d2c26676b9d77b64c7c70115edf73e43f/LIC-EXP-1/Screenshot%202026-02-19%20154630.png) 
 write something abt it and finish DC 
 
 --
@@ -154,10 +156,12 @@ A<sub>v</sub> ≈ 0.001498 × 2250 ≈ 3.37 v/v
 Gain in dB:
 20 log(A<sub>v</sub>) = 10.55 db
 
-The theoretical gain (~3.37) closely matches the simulated gain (3.36), validating the design.
-
+The theoretical gain (~3.37) closely matches the simulated gain (3.36), validating the design.  
+![Image description](https://github.com/shreevathsa-ks/LIC-LAB/blob/f22aee5d2c26676b9d77b64c7c70115edf73e43f/LIC-EXP-1/Screenshot%202026-02-19%20162409.png)  
 --
 # AC ANAYSIS  
+![Image description](https://github.com/shreevathsa-ks/LIC-LAB/blob/f22aee5d2c26676b9d77b64c7c70115edf73e43f/LIC-EXP-1/Screenshot%202026-02-25%20220154.png) 
+![Image description](https://github.com/shreevathsa-ks/LIC-LAB/blob/f22aee5d2c26676b9d77b64c7c70115edf73e43f/LIC-EXP-1/Screenshot%202026-02-19%20164610.png)  
 Bandwidth = 1.2966 Ghz.  
 3db frequency = 1.2966 Ghz.  
 
@@ -175,6 +179,7 @@ f<sub>3db</sub> = 7.328 Mhz.
 Midband Gain = 3.326 Mhz.  
 UGB = 3.326 x 7.328 Mhz = 24.37 Mhz  
 23.29 Mhz ≈ 24.37 Mhz  
+![Image description](https://github.com/shreevathsa-ks/LIC-LAB/blob/f22aee5d2c26676b9d77b64c7c70115edf73e43f/LIC-EXP-1/Screenshot%202026-02-19%20165727.png)
 
 --
 
