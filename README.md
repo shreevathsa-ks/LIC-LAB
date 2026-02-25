@@ -124,37 +124,66 @@ We got W as 9.087µm
 write something abt it and finish DC 
 
 --
+## TRANSIENT ANALYSIS  
 
-TRANSIENT ANALYSIS  
+### Simulation
 
-###Simulation
-
-Input applied:
-Sine wave with AC amplitude = 10 mV, frequency = 1 kHz, DC offset = 0.9 V
+Input applied:  
+Sine wave with AC amplitude = 10 mV           (We took AC amp/v<sub>gs</sub> as 10mV because of the expression v<sub>gs</sub> <<2V<sub>ov</sub> for the Mosfet to be **Linear** ) (10m << 1068mV )    
+frequency = 1 kHz   
+DC offset = 0.9 V
 
 From LTspice simulation:
 V<sub>in</sub>(p-p) = 19.237 mV
 V<sub>out</sub>(p-p) = 63.997 mV
 
 Voltage gain (simulation):
-A<sub>v</sub> = V<sub>out</sub>(p-p) / V<sub>in</sub>(p-p) ≈ 3.36
+A<sub>v</sub> = V<sub>out</sub>(p-p) / V<sub>in</sub>(p-p) ≈ 3.36 v/v
 
 Gain in dB:
 20 log(A<sub>v</sub>) = 10.438 dB
 
-###Theoretical Gain Calculation
+### Theoretical Gain Calculation
 
-Using small signal relation:
+Using small signal relation:  
+g<sub>m</sub> = 2I<sub>D</sub> / V<sub>OV</sub>  
+g<sub>m</sub> ≈ 0.001498 S  
+A<sub>v</sub> = g<sub>m</sub> R<sub>D</sub>  
+A<sub>v</sub> ≈ 0.001498 × 2250 ≈ 3.37 v/v  
 
-g<sub>m</sub> = 2I<sub>D</sub> / V<sub>OV</sub>
-
-g<sub>m</sub> ≈ 0.001498 S
-
-A<sub>v</sub> = g<sub>m</sub> R<sub>D</sub>
-
-A<sub>v</sub> ≈ 0.001498 × 2250 ≈ 3.37
+Gain in dB:
+20 log(A<sub>v</sub>) = 10.55 db
 
 The theoretical gain (~3.37) closely matches the simulated gain (3.36), validating the design.
+
+--
+# AC ANAYSIS  
+Bandwidth = 1.2966 Ghz.  
+3db frequency = 1.2966 Ghz.  
+
+**With Capacitor Load**
+Capacitor value = 10pF.
+BW = 7.328 Mhz.   
+3db frequency = 7.328 Mhz.  
+0db frequency = 23.29 Mhz.  
+
+Unity gain Bandwidth [UGB] = 23.29 Mhz.  
+Theoretically,  
+UGB = Midband frequency x f<sub>3db</sub>  
+So, 
+f<sub>3db</sub> = 7.328 Mhz.  
+Midband Gain = 3.326 Mhz.  
+UGB = 3.326 x 7.328 Mhz = 24.37 Mhz  
+23.29 Mhz ≈ 24.37 Mhz  
+
+--
+
+
+
+
+
+
+
 
 
 
