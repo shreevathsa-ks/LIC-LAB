@@ -117,15 +117,12 @@ W ≈ 6.755 µm
 
 But if we verify the same circuit with the same parameters, the I<sub>D</sub> value and the V<sub>GS</sub> 
 value will not match the ones that we got from theoretical analysis.
-If we change the Windth value we can obtain the desired current and voltage.
-We got W as 9.087µm
+If we change the Width value we can obtain the desired current and voltage.
+We got W as 9.087µm  
 
---
+![Image description](https://github.com/shreevathsa-ks/LIC-LAB/blob/f22aee5d2c26676b9d77b64c7c70115edf73e43f/LIC-EXP-1/Screenshot%202026-02-19%20154630.png)    
+Now we can clearly see in the simulation that the V<sub>GS</sub> is very close to 0.9V and the current I<sub>D</sub> is also very close to 400µA for the width value of 9.087µm validating our result of the Power being ≤ 1 mW. 
 
-![Image description](https://github.com/shreevathsa-ks/LIC-LAB/blob/f22aee5d2c26676b9d77b64c7c70115edf73e43f/LIC-EXP-1/Screenshot%202026-02-19%20154630.png) 
-write something abt it and finish DC 
-
---
 ## TRANSIENT ANALYSIS  
 
 ### Simulation
@@ -156,20 +153,36 @@ A<sub>v</sub> ≈ 0.001498 × 2250 ≈ 3.37 v/v
 Gain in dB:
 20 log(A<sub>v</sub>) = 10.55 db
 
-The theoretical gain (~3.37) closely matches the simulated gain (3.36), validating the design.  
+**The theoretical gain (~3.37) closely matches the simulated gain (3.36), validating the design.**  
+
 ![Image description](https://github.com/shreevathsa-ks/LIC-LAB/blob/f22aee5d2c26676b9d77b64c7c70115edf73e43f/LIC-EXP-1/Screenshot%202026-02-19%20162409.png)  
 --
 # AC ANAYSIS  
 ![Image description](https://github.com/shreevathsa-ks/LIC-LAB/blob/f22aee5d2c26676b9d77b64c7c70115edf73e43f/LIC-EXP-1/Screenshot%202026-02-25%20220154.png) 
 ![Image description](https://github.com/shreevathsa-ks/LIC-LAB/blob/f22aee5d2c26676b9d77b64c7c70115edf73e43f/LIC-EXP-1/Screenshot%202026-02-19%20164610.png)  
+
+**The bandwidth of the amplifier is defined as the range of frequencies over which the gain remains within 3 dB of its midband value. The −3 dB point corresponds to the frequency at which the gain drops to**
+
+A<sub>v(mid)</sub> / √2
+
 Bandwidth = 1.2966 Ghz.  
 3db frequency = 1.2966 Ghz.  
 
-**With Capacitor Load**
-Capacitor value = 10pF.
+**With Capacitor Load**  
+Capacitor value = 10pF.  
 BW = 7.328 Mhz.   
 3db frequency = 7.328 Mhz.  
 0db frequency = 23.29 Mhz.  
+
+**From AC analysis, the upper cutoff frequency (f<sub>H</sub>) is obtained from the Bode plot at the −3 dB point. Since this is a single-stage CS amplifier with dominant high-frequency roll-off due to the load capacitance (10 pF), the bandwidth is primarily limited by the output pole.**
+
+**For a single-pole response, the bandwidth can be approximated as**
+
+**BW ≈ f<sub>H</sub>**
+
+In this design, the −3 dB frequency is 7.328 MHz, hence
+
+Bandwidth ≈ 7.328 MHz.
 
 Unity gain Bandwidth [UGB] = 23.29 Mhz.  
 Theoretically,  
@@ -179,9 +192,9 @@ f<sub>3db</sub> = 7.328 Mhz.
 Midband Gain = 3.326 Mhz.  
 UGB = 3.326 x 7.328 Mhz = 24.37 Mhz  
 23.29 Mhz ≈ 24.37 Mhz  
+
 ![Image description](https://github.com/shreevathsa-ks/LIC-LAB/blob/f22aee5d2c26676b9d77b64c7c70115edf73e43f/LIC-EXP-1/Screenshot%202026-02-19%20165727.png)
 
---
 
 
 
