@@ -196,7 +196,28 @@ UGB = 3.326 x 7.328 Mhz = 24.37 Mhz
 ![Image description](https://github.com/shreevathsa-ks/LIC-LAB/blob/f22aee5d2c26676b9d77b64c7c70115edf73e43f/LIC-EXP-1/Screenshot%202026-02-19%20165727.png)
 
 
+# Result:
 
+DC ANALYSIS  
+Vout = 0.90005V  
+W = 9.087 UA  
+  
+TRANSIENT ANALYSIS  
+simulator Av(dB) = 10.438 dB  
+theriotical Av(dB) = 10.550 dB  
+
+AC ANALYSIS  
+BW = 1.2966 GHz  
+UGB = 23.29 MHz  
+Midband gain * f (3dB) = 24.37 MHz  
+
+## Inference
+
+The Common Source amplifier was designed to satisfy the given specifications of V<sub>DD</sub> = 1.8 V and power dissipation below 1 mW. From DC analysis, the MOSFET was verified to operate in the saturation region with the selected bias conditions (V<sub>GS</sub> and I<sub>D</sub>), ensuring proper small-signal amplification.
+
+Transient analysis confirmed voltage amplification with 180° phase inversion. The simulated gain (A<sub>v</sub> ≈ 3.36) closely matched the theoretical value calculated using A<sub>v</sub> = g<sub>m</sub> R<sub>D</sub>, showing good agreement between analysis and simulation.
+
+AC analysis indicated a dominant single-pole response. The midband gain was approximately 3.36 (10.4 dB), and the −3 dB bandwidth was found to be 7.328 MHz. The bandwidth limitation is mainly due to the load capacitance C<sub>L</sub> = 10 pF. Overall, the results validate the theoretical design and confirm proper operation of the CS amplifier.
 
 
 
