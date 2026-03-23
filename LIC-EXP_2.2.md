@@ -25,6 +25,8 @@ Chosen Drain Current
 
 I<sub>D</sub> = 400µA
 
+---
+
 Overdrive Voltage Design
 
 For maximum symmetrical swing, the overdrive voltage is selected carefully.
@@ -43,10 +45,12 @@ V<sub>ov</sub> = 0.6 / 2
 
 V<sub>ov</sub> = 0.3V
 
+---
+
 Operating Conditions
 Saturation Constraints
 
-For M<sub>3</sub>
+**For M<sub>3</sub>**
 
 V<sub>DS3</sub> ≥ V<sub>ov</sub>
 
@@ -54,13 +58,13 @@ V<sub>X</sub> ≥ V<sub>ov</sub>
 
 V<sub>X(min)</sub> = V<sub>ov</sub>
 
-For M<sub>1</sub>
+**For M<sub>1</sub>**
 
 V<sub>DS1</sub> ≥ V<sub>ov</sub>
 
 V<sub>out</sub> ≥ V<sub>X</sub> + V<sub>ov</sub>
 
-For M<sub>2</sub>
+**For M<sub>2</sub>**
 
 V<sub>SD2</sub> ≥ V<sub>ov</sub>
 
@@ -84,6 +88,7 @@ Therefore
 
 2V<sub>ov</sub> ≤ V<sub>out</sub> ≤ V<sub>DD</sub> − V<sub>ov</sub>
 
+---
 
 Optimum Output Voltage
 
@@ -93,6 +98,8 @@ V<sub>out</sub> = (1.8 + 0.3) / 2
 
 V<sub>out</sub> = 1.05V
 
+---
+
 Output Swing
 
 V<sub>swing</sub> = V<sub>DD</sub> − 3V<sub>ov</sub>
@@ -101,7 +108,9 @@ V<sub>swing</sub> = 1.8 − 0.9
 
 V<sub>swing</sub> = 0.9V
 
-Gate Voltage Calculations
+---
+
+**Gate Voltage Calculations**
 NMOS
 
 Threshold Voltage
@@ -120,6 +129,8 @@ Chosen
 
 V<sub>GS</sub> = 0.666V
 
+---
+
 PMOS
 
 Threshold Voltage
@@ -137,6 +148,8 @@ V<sub>SG(max)</sub> = 0.99V
 Chosen
 
 V<sub>SG</sub> = 0.69V
+
+---
 
 Bias Voltages
 
@@ -160,6 +173,8 @@ V<sub>B1</sub> = 1.8 − 0.69
 
 V<sub>B1</sub> = 1.11V
 
+---
+
 
 ### DC Analysis
 
@@ -175,6 +190,8 @@ V<sub>in</sub> = 0.966V
 V<sub>out</sub> ≈ 1.05V
 
 (Insert DC operating point results here)
+
+---
 
 
 ### Transient Analysis
@@ -215,7 +232,7 @@ A<sub>v(dB)</sub> = 9.77 dB
 
 (Insert transient waveform here)
 
-
+---
 
 ### AC Analysis
 
