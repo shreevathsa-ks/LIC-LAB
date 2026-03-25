@@ -21,6 +21,8 @@ Channel Length  L = 560nm
 Chosen Overdrive Voltage  
 V<sub>ov</sub> = 0.25V 
 
+---
+
 **Calculations**
 Source Resistor Calculation
 
@@ -37,6 +39,8 @@ V<sub>out</sub> = V<sub>DD</sub>/2 + V<sub>RS</sub>
 V<sub>out</sub> = 1.8/2 + 0.2  
 V<sub>out</sub> = 1.1V  
 
+---
+
 
 **NMOS Calculations**
 
@@ -49,11 +53,13 @@ V<sub>GS1</sub> = V<sub>thn</sub> + V<sub>ov</sub>
 V<sub>GS1</sub> = 0.366 + 0.25  
 V<sub>GS1</sub> = 0.616V   
 
-Bias Voltage  
+**Bias Voltage**  
 
 V<sub>B1</sub> = V<sub>GS1</sub> + V<sub>RS</sub>   
 V<sub>B1</sub> = 0.616 + 0.2  
 <sub>B1</sub> = 0.816V   
+
+---
 
 
 **NMOS Width Calculation**
@@ -72,7 +78,9 @@ W = 30.441µm
 Adjusted width used in simulation  
 W<sub>n</sub> = 54µm  
 
-PMOS Calculations
+---
+
+**PMOS Calculations**
 
 Threshold Voltage
 
@@ -97,6 +105,8 @@ V<sub>S</sub> = V<sub>DD</sub> = 1.8V
 Gate Voltage
 
 V<sub>G</sub> = V<sub>out</sub> = 1.1V
+
+---
 
 Bias Voltage
 
@@ -123,8 +133,8 @@ Adjusted simulation width
 W<sub>p</sub> = 165.255µm
 
 ---
---
-Transient Analysis
+
+### Transient Analysis
 
 Transient analysis was performed to observe the small signal amplification capability of the circuit.
 
@@ -140,7 +150,7 @@ V<sub>in</sub> = (825.962 − 806.194) mV
 
 V<sub>in</sub> = 19.768mV
 
-Voltage Gain
+**Voltage Gain**
 
 A<sub>v</sub> = V<sub>out</sub> / V<sub>in</sub>
 
@@ -152,8 +162,10 @@ A<sub>v(dB)</sub> = 20 log(A<sub>v</sub>)
 
 A<sub>v(dB)</sub> = 28.58 dB
 
---
-AC Analysis
+---
+
+### AC Analysis
+
 Without Load Capacitor
 
 Midband Gain
@@ -176,9 +188,11 @@ UGB = 26.88 × 52.529 MHz
 
 UGB ≈ 1.714 GHz
 
+---
+
 With Load Capacitor
 
-Midband Gain
+**Midband Gain**
 
 28.76 dB
 
@@ -190,7 +204,7 @@ Midband Gain
 
 772.338 kHz
 
-Unity Gain Bandwidth
+**Unity Gain Bandwidth**
 
 UGB = A<sub>v</sub> × BW
 
