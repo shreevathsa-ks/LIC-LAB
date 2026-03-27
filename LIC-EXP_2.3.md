@@ -215,4 +215,4 @@ UGB ≈ 60.88 MHz
 
 (Closely matches simulated value, validating the design)
 
-(Insert AC frequency response plot here)
+![Image description](https://github.com/shreevathsa-ks/LIC-LAB/blob/main/EXP-2/AC_2.3.png?raw=true)
