@@ -1,4 +1,4 @@
-# LIC-LAB EXPERIMENT - 2
+# LIC-LAB EXPERIMENT - 2.1
 ## Aim
 ### To Design the Amplifier Configuration using tsmc 180nm tech.lib in LT Spice 
 **Parameters**
@@ -132,6 +132,8 @@ Adjusted simulation width
 
 W<sub>p</sub> = 165.255µm
 
+![Image description](https://github.com/shreevathsa-ks/LIC-LAB/blob/main/EXP-2/DC-2.1.png?raw=true)
+
 ---
 
 ### Transient Analysis
@@ -161,6 +163,8 @@ Gain in dB
 A<sub>v(dB)</sub> = 20 log(A<sub>v</sub>)
 
 A<sub>v(dB)</sub> = 28.58 dB
+
+![Image description](https://github.com/shreevathsa-ks/LIC-LAB/blob/main/EXP-2/transient_2.1.png?raw=true)
 
 ---
 
@@ -211,3 +215,6 @@ UGB = A<sub>v</sub> × BW
 UGB = 26.88 × 772.338 kHz
 
 UGB ≈ 21.216 MHz
+
+![Image description](https://github.com/shreevathsa-ks/LIC-LAB/blob/main/EXP-2/AC_2.1.png?raw=true)
+
