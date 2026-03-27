@@ -1,11 +1,10 @@
 CMOS Amplifier with Active Load (M<sub>1</sub>, M<sub>3</sub> NMOS and M<sub>2</sub> PMOS)
 Circuit Description
 
-This circuit consists of two NMOS transistors (M<sub>1</sub>, M<sub>3</sub>) and one PMOS transistor (M<sub>2</sub>).
-M<sub>3</sub> acts as a biasing device, M<sub>1</sub> acts as the amplifying transistor, and M<sub>2</sub> serves as the active load.
-The design ensures all transistors operate in the saturation region, enabling proper analog amplification and maximum output swing.
+This circuit consists of two NMOS transistors (M<sub>1</sub>, M<sub>3</sub>) and one PMOS transistor (M<sub>2</sub>).  
+M<sub>3</sub> acts as a biasing device, M<sub>1</sub> acts as the amplifying transistor, and M<sub>2</sub> serves as the active load.  
+The design ensures all transistors operate in the saturation region, enabling proper analog amplification and maximum output swing.  
 
-(Insert circuit schematic here)
 
 Design Parameters
 
@@ -189,7 +188,7 @@ V<sub>B2</sub> = 0.666V
 V<sub>in</sub> = 0.966V
 V<sub>out</sub> ≈ 1.05V
 
-(Insert DC operating point results here)
+![Image description](https://github.com/shreevathsa-ks/LIC-LAB/blob/main/EXP-2/DC_2.2.png?raw=true)
 
 ---
 
@@ -230,7 +229,7 @@ A<sub>v(dB)</sub> = 20 log(A<sub>v</sub>)
 
 A<sub>v(dB)</sub> = 9.77 dB
 
-(Insert transient waveform here)
+![Image description](https://github.com/shreevathsa-ks/LIC-LAB/blob/main/EXP-2/Transient_2.2.png?raw=true)
 
 ---
 
@@ -265,8 +264,7 @@ UGB ≈ 169.33 MHz
 
 (Small deviation due to simulation approximations)
 
-
-(Insert AC frequency response plot here)
+![Image description](https://github.com/shreevathsa-ks/LIC-LAB/blob/main/EXP-2/AC_2.2.png?raw=true)
 
 
 
