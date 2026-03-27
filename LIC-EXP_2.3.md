@@ -2,9 +2,7 @@
 **Circuit Description**  
 
 The circuit consists of a PMOS transistor (M<sub>2</sub>) acting as an active load, a common-source NMOS transistor (M<sub>1</sub>), and a diode-connected NMOS transistor (M<sub>3</sub>) used for biasing.  
-The diode-connected configuration ensures stable biasing current while maintaining all transistors in the saturation region.  
-
-(Insert circuit schematic here)  
+The diode-connected configuration ensures stable biasing current while maintaining all transistors in the saturation region.   
 
 ---
 
@@ -147,7 +145,7 @@ The chosen bias voltages ensure proper current flow and symmetric output swing.
 
 V<sub>out</sub> ≈ 1.05V
 
-(Insert DC simulation result here)
+![Image description](https://github.com/shreevathsa-ks/LIC-LAB/blob/main/EXP-2/DC_2.3.png?raw=true)
 
 ---
 
@@ -185,7 +183,7 @@ A<sub>v(dB)</sub> = 20 log(A<sub>v</sub>)
 
 A<sub>v(dB)</sub> = 33.56 dB
 
-(Insert transient waveform here)
+![Image description](https://github.com/shreevathsa-ks/LIC-LAB/blob/main/EXP-2/Transient_2.3.png?raw=true)
 
 ---
 
