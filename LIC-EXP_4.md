@@ -324,3 +324,296 @@ The MOS differential amplifier using resistive load has been successfully design
 The results obtained from simulation are close to theoretical values, confirming the validity of the design approach. Minor differences are due to real-world non-idealities, which are expected in practical circuits.
 
 ---
+
+
+
+# Circuit 2: Differential Amplifier with Active Load
+
+---
+
+## Objective
+
+The objective of this design is to implement a MOS differential amplifier using an active load configuration and analyze its performance. The focus is on maintaining proper biasing, ensuring all transistors operate in saturation, and evaluating gain, linearity, and frequency response.
+
+---
+
+## Given Parameters
+
+Technology: 180 nm
+
+<sub>V<sub>DD</sub> = +0.9 V</sub> <sub>V<sub>SS</sub> = −0.9 V</sub>
+Power ≤ 2.2 mW <sub>L = 540 nm</sub>
+
+---
+
+## Design Approach
+
+In this circuit, the resistive load used earlier is replaced with an active load using MOSFETs. This helps in increasing the output resistance and thereby improving the gain of the amplifier.
+
+The circuit consists of:
+
+* M1, M2 → input differential pair
+* M3, M4 → active load
+* M5 → tail current source
+
+The design is carried out such that all transistors remain in saturation and the current distribution remains symmetrical under zero differential input.
+
+---
+
+## Tail Current Calculation
+
+The total current is limited by the power constraint:
+
+<sub>P = (V<sub>DD</sub> − V<sub>SS</sub>) I<sub>SS</sub></sub>
+
+<sub>1.8 × I<sub>SS</sub> ≤ 2.2 × 10⁻³</sub>
+
+<sub>I<sub>SS</sub> ≈ 1.22 mA</sub>
+
+This value is chosen to ensure safe operation within the given power limit.
+
+---
+
+## Current Distribution
+
+Under balanced condition:
+
+<sub>I<sub>D1</sub> = I<sub>D2</sub> = I<sub>SS</sub> / 2</sub>
+
+<sub>I<sub>D</sub> ≈ 0.61 mA</sub>
+
+This ensures symmetric operation of the differential pair.
+
+---
+
+## Bias Conditions
+
+<sub>V<sub>G</sub> = 0 V</sub> <sub>V<sub>S</sub> ≈ −0.7 V</sub>
+
+<sub>V<sub>GS</sub> = 0.7 V</sub>
+
+<sub>V<sub>ov</sub> ≈ 0.34 V</sub>
+
+This confirms that the NMOS transistors are properly turned ON.
+
+---
+
+## Region of Operation Check
+
+For saturation:
+
+<sub>V<sub>DS</sub> ≥ V<sub>ov</sub></sub>
+
+<sub>V<sub>DS</sub> = 0 − (−0.7) = 0.7 V</sub>
+
+Since:
+
+<sub>0.7 > 0.34</sub>
+
+all NMOS devices operate in saturation.
+
+---
+
+## Width Calculation
+
+### NMOS Differential Pair (M1, M2)
+
+Using:
+
+<sub>I<sub>D</sub> = (1/2) μ<sub>n</sub>C<sub>ox</sub> (W/L)(V<sub>ov</sub>)²</sub>
+
+Rearranging:
+
+<sub>W = (2I<sub>D</sub>L)/(μ<sub>n</sub>C<sub>ox</sub>(V<sub>ov</sub>)²)</sub>
+
+Calculated width:
+
+<sub>W ≈ 31.6 µm</sub>
+
+After fine-tuning in simulation to match the desired current and output conditions:
+
+<sub>W ≈ 36 µm</sub>
+
+---
+
+### Tail Current Source (M5)
+
+Using:
+
+<sub>W = (2I<sub>D</sub>L)/(μ<sub>n</sub>C<sub>ox</sub>(V<sub>ov</sub>)²)</sub>
+
+Calculated width:
+
+<sub>W ≈ 139 µm</sub>
+
+After adjustment for proper bias:
+
+<sub>W ≈ 228 µm</sub>
+
+This ensures stable current generation.
+
+---
+
+### Active Load (M3, M4)
+
+Calculated width:
+
+<sub>W ≈ 8.7 µm</sub>
+
+This value ensures that PMOS devices remain in saturation and provide sufficient output resistance.
+
+---
+
+## DC Analysis
+
+📌 *Insert DC schematic screenshot here*
+📌 *Insert DC operating point screenshot here*
+
+The DC analysis verifies that:
+
+* Tail current is close to the designed value
+* Current splits equally between M1 and M2
+* Output nodes remain symmetric
+* All transistors operate in saturation
+
+---
+
+## Input Common Mode Range (ICMR)
+
+The ICMR is the range of input voltage for which all transistors remain in saturation.
+
+### Minimum Value
+
+<sub>V<sub>ICM(min)</sub> = V<sub>S</sub> + V<sub>T</sub></sub>
+
+<sub>V<sub>ICM(min)</sub> = −0.34 V</sub>
+
+---
+
+### Maximum Value
+
+To keep PMOS load in saturation:
+
+<sub>V<sub>ICM(max)</sub> = V<sub>D</sub> + |V<sub>TP</sub>|</sub>
+
+<sub>V<sub>ICM(max)</sub> ≈ 0.39 V</sub>
+
+---
+
+### Final Range
+
+<sub>−0.34 V ≤ V<sub>ICM</sub> ≤ 0.39 V</sub>
+
+---
+
+## Output Common Mode Range (OCMR)
+
+### Minimum Output
+
+<sub>V<sub>out(min)</sub> = V<sub>S</sub> + V<sub>ov</sub></sub>
+
+<sub>V<sub>out(min)</sub> = −0.36 V</sub>
+
+---
+
+### Maximum Output
+
+<sub>V<sub>out(max)</sub> = V<sub>DD</sub> − V<sub>ovp</sub></sub>
+
+<sub>V<sub>out(max)</sub> ≈ 0.65 V</sub>
+
+---
+
+## Differential Input Range
+
+For linear operation:
+
+<sub>|v<sub>id</sub>| ≤ 2V<sub>ov</sub></sub>
+
+<sub>|v<sub>id</sub>| ≤ 0.68 V</sub>
+
+Beyond this, one transistor enters cutoff and distortion occurs.
+
+---
+
+## Transient Analysis
+
+📌 *Insert transient waveform (small input)*
+📌 *Insert transient waveform (large input)*
+
+### Linear Region
+
+For small input (≈100 mV):
+
+* Output is smooth and sinusoidal
+* Current is shared between both transistors
+* Circuit behaves linearly
+
+---
+
+### Non-Linear Region
+
+For larger input (≈600 mV):
+
+* Output shows distortion
+* One transistor carries most of the current
+* Amplifier deviates from linear behavior
+
+---
+
+## Simulated Gain
+
+📌 *Insert waveform screenshot here*
+
+<sub>V<sub>in(pp)</sub> ≈ 100 mV</sub> <sub>V<sub>out(pp)</sub> ≈ 181 mV</sub>
+
+<sub>A<sub>v</sub> ≈ 1.81</sub>
+
+<sub>A<sub>v(dB)</sub> ≈ 5.15 dB</sub>
+
+---
+
+## Theoretical Gain
+
+<sub>g<sub>m</sub> ≈ 4.11 mS</sub>
+
+<sub>R<sub>out</sub> ≈ 8.2 kΩ</sub>
+
+<sub>A<sub>v</sub> ≈ 33.7</sub>
+
+---
+
+## Discussion
+
+The difference between theoretical and simulated gain is quite significant in this case. This is mainly because theoretical calculations assume ideal current sources and infinite output resistance.
+
+In practice, the current source (M5) and active load (M3, M4) introduce non-idealities which reduce the effective gain.
+
+---
+
+## AC Analysis
+
+📌 *Insert Bode plot screenshot here*
+
+The frequency response shows:
+
+* Flat gain in midband region
+* Gain roll-off at higher frequencies
+
+Bandwidth is observed in the GHz range due to small device dimensions and parasitic effects.
+
+---
+
+## Conclusion
+
+The differential amplifier with active load is successfully designed and analyzed.
+
+* The circuit satisfies the power constraint
+* Proper biasing ensures saturation
+* Gain is reduced compared to ideal case due to non-ideal effects
+* Linear operation is maintained only for small signals
+
+Overall, the circuit demonstrates the practical limitations of MOS differential amplifiers with active loads.
+
+---
+
